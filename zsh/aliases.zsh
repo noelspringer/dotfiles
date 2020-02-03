@@ -78,6 +78,8 @@ alias gsh='git show'
 alias gshw='git show'
 alias gshow='git show'
 alias gi='vim .gitignore'
+alias gck='git checkout'
+alias gcb='git checkout -b'
 alias gcm='git ci -m'
 alias gcim='git ci -m'
 alias gci='git ci'
@@ -210,4 +212,75 @@ alias dbmd='spring rake db:migrate:down'
 alias dbmu='spring rake db:migrate:up'
 
 # Homebrew
-alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
+alias brewu='brew update  && brew upgrade && brew cleanup && brew prune && brew doctor'
+
+# Change permissions of directories contained in /data
+alias dataperms='find /data -type d -exec chmod 2775 '{}' \;'
+
+# Custom
+alias upg='sudo apt update && sudo apt full-upgrade -y;sudo apt autoremove -y'
+alias ..='cd ..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+alias www='cd ~/www'
+alias bhb='ssh -p 52382 superadmin@149.28.172.2'
+alias brisbanests.com='ssh -t -p 52382 websrv@149.28.186.60 "cd /srv/www; exec $SHELL"'
+alias cbw='ssh -p 2382 commune@159.69.38.255'
+alias superadmin.cbw='ssh -p 2382 superadmin@159.69.38.255'
+alias stats1='ssh -p 52382 superadmin@195.201.42.28'
+alias nginxtuts='ssh -p 52382 superadmin@116.203.93.43'
+alias websrv.nginxtuts='ssh -p 52382 websrv@116.203.93.43'
+alias lovepredicted.com='ssh -p 18765 lovepred@77.104.142.26'
+alias stsvult='ssh -p 52382 superadmin@149.28.186.60'
+alias websrv.bhb='ssh -t -p 52382 websrv@149.28.172.2 "cd /srv/www; exec $SHELL"'
+alias websrv.stsvult='ssh -t -p 52382 websrv@149.28.186.60 "cd /srv/www; exec $SHELL"'
+alias lnkto='ssh -p 52382 superadmin@139.162.70.252'
+alias websrv.lnkto='ssh -t -p 52382 websrv@139.162.70.252 "cd /srv/www; exec $SHELL"'
+alias websrv.web02.lin='ssh -t -p 52382 websrv@172.104.124.28 "cd /srv/www; exec $SHELL"'
+alias web1.syd.vult='ssh -p 52382 superadmin@149.28.186.60'
+alias web02.syd.vult='ssh -p 52382 superadmin@149.28.172.2'
+alias web02.lin='ssh -p 52382 superadmin@172.104.124.28'
+#
+# Code Insiders
+alias ci='/usr/bin/code-insiders'
+alias gmagick='/usr/local/bin/gm'
+
+# MySQL backup single db
+alias mybak='${HOME}/bin/mysqlbak/scripts/mysqlbak-single.sh'
+alias mybakbhb='${HOME}/bin/mysqlbak/scripts/mysqlbak-single.sh webspring_blueheelerboots'
+
+# Composer
+alias cup='composer update'
+alias cin='composer install'
+
+# PHPCS
+phpcbf='phpcbf --standard="WordPress-Extra"'
+
+# More Git
+alias glp='git log --pretty'
+
+# WP-CLI
+alias wpl='wp plugin list'
+alias wpu='wp plugin update'
+alias wpi='wp plugin install'
+alias wpa='wp plugin activate'
+alias wtl='wp theme list'
+alias wta='wp theme activate'
+
+# zap
+alias zap='/usr/local/bin/zap.sh'
+
+# myos
+alias myos='/home/webspring/devenv/myos/myos.sh'
+
+# Emacs
+alias emc='emacsclient'
+alias ema='emacsclient /data/Dropbox/org/agenda.org'
+
+# Tmux
+alias tls='tmux list-sessions'
+alias tat='tmux a -t'
+alias tns='tmux new -s'
+
